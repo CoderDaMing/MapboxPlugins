@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ming.mapboxplugins">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- annotationplugin -->
+        <activity android:name=".annotationplugin.LineActivity" />
+        <activity android:name=".annotationplugin.LineChangeActivity" />
+        <activity android:name=".annotationplugin.PressForSymbolActivity" />
+        <activity android:name=".annotationplugin.BulkSymbolActivity" />
+        <activity android:name=".annotationplugin.CircleActivity" />
+        <activity android:name=".annotationplugin.DynamicSymbolChangeActivity" />
+        <activity android:name=".annotationplugin.FillActivity" />
+        <activity android:name=".annotationplugin.FillChangeActivity" />
+        <!-- Location -->
+        <activity android:name=".location.LocationComponentActivity" />
+        <activity android:name=".location.LocationActivity" />
+
+        <service
+            android:name=".location.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- Data clustering -->
+        <activity android:name=".dataclustering.CircleLayerClusteringActivity" />
+        <activity android:name=".dataclustering.ImageClusteringActivity" />
+        <!-- offline plugin -->
+        <activity android:name=".offlineplugin.OfflinePluginActivity" />
+        <!-- Snap shotter -->
+        <activity android:name=".snapshotter.SnapshotNotificationActivity" />
+        <activity android:name=".snapshotter.SnapshotShareActivity" />
+        <!--BuildingPlugin-->
+        <activity android:name=".buildingplugin.BuildingPluginActivity" />
+        <!--LocalizationPlugin-->
+        <activity android:name=".localizationplugin.LocalizationPluginActivity" />
+        <!--MarkerView-->
+        <activity android:name=".markerview.MarkerViewActivity">
+
+        </activity>
+    </application>
+
+</manifest>
